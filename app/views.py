@@ -1,13 +1,13 @@
-from django.shortcuts import render
-from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from rest_framework import status
 from rest_framework.viewsets import ModelViewSet
 from django.contrib.auth.models import User
-from rest_framework import viewsets
 from app.serializers import BookSerializer ,RatingSerializer
-from app.models import Book,Rating
-from rest_framework.decorators import api_view
+# from django.shortcuts import render
+# from rest_framework.response import Response
+# from rest_framework import status
+# from rest_framework import viewsets
+# from app.models import Book,Rating
+# from rest_framework.decorators import api_view
 
 class BookViewSet(ModelViewSet):
 	serializer_class = BookSerializer
