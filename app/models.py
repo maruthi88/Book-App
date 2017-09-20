@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 class Book(models.Model):
 
+	"""creating Model for Book """
+
 	author = models.ForeignKey(User,null=True)
 	name = models.CharField(max_length=50)
 	created_at = models.DateTimeField(auto_now_add=True,blank=False)
@@ -16,6 +18,8 @@ class Book(models.Model):
 		return self.name
 
 class Rating(models.Model):
+	
+	""" Its used to give rating to Book"""
 
 	book = models.ForeignKey(Book,null=True)
 	user = models.ForeignKey(User,null=True)
