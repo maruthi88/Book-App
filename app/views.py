@@ -20,11 +20,6 @@ class RatViewSet(ModelViewSet):
 	queryset = Rating.objects.all()
 	permission_classes = (IsAuthenticated,)
 
-	
-	# def perform_create(self, serializer):
-	# 	# import ipdb; ipdb.set_trace()
-	# 	serializer.save(user=self.request.user)
-
 # class BookDetailsViewSet(viewsets.ViewSet):
 
 # 	def list(self,request):
